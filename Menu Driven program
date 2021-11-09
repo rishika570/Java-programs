@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Menu {
+    public static void main(String[] args) {
+        int ch,n,c=0,a=0,b=1,i,m,n1=1;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 1 for prime no.");
+        System.out.println("Enter 2 for fibonacci");
+        System.out.println("Enter 3 for factorial");
+        System.out.println("Enter 4 for Exit");
+        System.out.println("Enter your choice");
+        ch=sc.nextInt();
+        n=sc.nextInt();
+        switch(ch){
+            case 1:
+                for(i=2;i<n;i++){
+                if(n%i==0){
+                    c++;
+                }
+            }
+                if(c==0){
+                    System.out.println("Prime no.");
+            }
+                else{
+                    System.out.println("not a prime no.");
+                }
+            break;
+            case 2:
+                System.out.print(a+" ");
+                System.out.print(b+" ");
+                for(i=2;i<=n;i++){
+                    m=a+b;
+                    a=b;
+                    b=m;
+                    System.out.print(m+" ");
+                }
+                break;
+            case 3:
+                for(i=1;i<=n;i++){
+                    n1=n1*i;
+                }
+                System.out.println(n1);
+                break;
+            case 4:
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+
+
+    }
+}
